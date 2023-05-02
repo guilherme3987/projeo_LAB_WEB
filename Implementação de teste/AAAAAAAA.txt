@@ -1,0 +1,164 @@
+<!-- auto-->
+var bloco = document.querySelector(".bloco");
+bloco.style.display = "flex";
+
+<!-- luz -->
+var bloco2 = document.querySelector(".bloco2");
+bloco2.style.display = "flex";
+
+<!--->
+var bloco3 = document.quertSelector(".bloco3");
+bloco3.style.display = "flex"; 
+
+      <div class="bloco"  style="display: none;">  <!-- auto-->
+        <div id="solucoes"  style="display: none;"></div>
+        <div id = "img1"></div>
+      </div>
+
+      <div class="bloco2"  style="display: none;">   <!-- luz -->
+        <div id = "solucoes2" style="display: none;"></div>
+        <div id="img2"></div>
+      </div>
+
+      <div class="bloco3"  style="display: none;"> <!-- carne-->
+        <div id="solucoes3" style="display: none;"></div>
+        <div id="img3"></div>
+      </div>
+*******************************************************************************
+
+               if(selectedValueN === 2){
+                var xvezesCar = parseFloat(prompt("Quantas vezes usa carro por semana ? "));
+                    /* O carro consome em média 8 litros de gasolina por cada 100 km rodados, 
+    o que resulta em um consumo de 80 litros de gasolina por mês. 
+    Sabemos que a queima de 1 litro de gasolina emite cerca de 2,35 kg de CO2. Então, a emissão de CO2 associada ao uso do carro é:
+    80 litros/mês x 2,35 kg CO2/litro = 184 kg CO2/mês */
+
+                // 1.35 por KM (em média faz 5.5 km) *4(semanas)....
+                while(xvezesCar <=0 || xvezesCar % 1 !==0){
+                    xvezesCar = parseFloat(prompt("Valor inválido! Digíte um  valor válido"));
+                }
+                const pegadaTotal2 = (184*xvezesCar) +  (0.055*num1) + (27*num2*4)  + (num3*70) ;
+                //console.log("Pegada de carbono: ",pegadaTotal2);
+                //console.log(typeof(pegadaTotal2));
+                //alert("Pegada de carbono: "+pegadaTotal2+" KgC no mês"); 
+                var resultado = document.getElementById("resultado");
+                // atualiza o conteúdo do elemento de resultado
+                resultado.innerHTML ="Pegada de carbono: "+pegadaTotal2.toFixed(2)+" KgC no mês";
+                // mostra o elemento de resultado
+                resultado.style.display = "block";
+
+                var solucoes3 = document.getElementById("solucoes3");
+                solucoes3.innerHTML = "O uso de transporte sustentável é fundamental para a preservação do meio ambiente e para a redução da poluição atmosférica. Ao escolher alternativas de transporte como bicicletas, transporte público, caronas solidárias ou veículos elétricos, contribuímos para a diminuição da emissão de gases de efeito estufa e, consequentemente, para a melhoria da qualidade do ar que respiramos."
+                
+                var bloco3 = document.querySelector(".bloco3");
+                bloco3.style.display = "flex";
+
+                    if(num2 >= 5){
+                        var solucoes = document.getElementById("solucoes");
+                        solucoes.innerHTML = "Reduzir o consumo de carne e laticínios, já que a produção desses produtos são responsáveis por uma grande quantidade de emissões de gases de efeito estufa. A porcentagem de emissões correspondente pode variar dependendo da fonte de dados, mas em geral a produção de carne e laticínios corresponde a cerca de 14,5% das emissões globais de gases de efeito estufa.";
+                        solucoes.style.display = "flex";
+                        
+                        var bloco3 = document.quertSelector(".bloco3");
+                        bloco3.style.display = "flex"; 
+                    }else{
+                        if(num2 <5){
+                            var solucoes = document.getElementById("solucoes");
+                            solucoes.innerHTML = "Continue reduzindo o consumo de carne e laticíneos,já que a produção de carne e laticíneos  é responsável por cerca de 14,5% das emissões globais de gases de efeito estufa.";
+                            solucoes.style.display = "flex";
+                            var bloco3 = document.quertSelector(".bloco3");
+                            bloco3.style.display = "flex"; 
+                        }
+                    }
+                    if(num1 >= 300){
+                        var solucoes2 = document.getElementById("solucoes2");
+                        solucoes2.innerHTML = "Alto consumo de energia elétrica, tente reduzir o consumo de energia elétrica,usando fontes renováveis de energia e evitando o desperdício de energia. A porcentagem de emissões correspondente dependerá da fonte de eletricidade utilizada, mas em geral a geração de eletricidade é responsável por cerca de 31% das emissões globais de gases de efeito estufa."
+                        solucoes2.style.display = "flex";
+
+                        var bloco2 = document.querySelector(".bloco2");
+                        bloco2.style.display = "flex";
+                    }else{
+                        if(num1 <200){
+                            var solucoes2 = document.getElementById("solucoes2");
+                            solucoes2.innerHTML = "Continue reduzindo o consumo de energia elétrica,usando fontes renováveis de energia e evitando o desperdício de energia. A porcentagem de emissões correspondente dependerá da fonte de eletricidade utilizada, mas em geral a geração de eletricidade é responsável por cerca de 31% das emissões globais de gases de efeito estufa."
+                            solucoes2.style.display = "block";
+
+                            var bloco2 = document.querySelector(".bloco2");
+                            bloco2.style.display = "flex";
+                        }
+                    }
+
+                    if(xvezesCar >=5){
+                        var solucoes3 = document.getElementById("solucoes3");
+                        solucoes3.innerHTML = "Usar transporte sustentável, como bicicleta, transporte público ou carros elétricos. A porcentagem de emissões correspondente dependerá do tipo de transporte utilizado,mas em geral o transporte é responsável por cerca de 15% das emissões globais de gases de efeito estufa."
+                        solucoes3.style.display = "flex";
+
+                        var bloco = document.querySelector(".bloco");
+                        bloco.style.display = "flex";
+
+                    }else{
+                        if(xvezesCar <5){
+                            var solucoes3 = document.getElementById("solucoes3");
+                            solucoes3.innerHTML = "Continue utilizando mais transporte sustentável, como bicicleta, transporte público ou carros elétricos. A porcentagem de emissões de um veículo como carro é cerca de 15% das emissões globais de gases de efeito estufa."
+                            solucoes3.style.display = "flex";
+                                
+                            var bloco = document.querySelector(".bloco");
+                            bloco.style.display = "flex";
+                          }
+                    }
+
+                }
+               
+               /*De acordo com estimativas do Instituto de Energia e Meio Ambiente (IEMA), uma moto com motor de 125 cc (modelo popular) que utiliza gasolina comum pode emitir em média cerca de 72 g de CO2 por quilômetro rodado. 
+               ---> para 125 cc: 0,072 * KM (em media 350 ) * 4 semanas 
+               */
+               if(selectedValueN === 3){
+                const xvezesM = parseFloat(prompt("Quantas vezes usa moto por semana ? "));
+                while(xvezesM <=0 || xvezesM % 1 !==0){
+                    xvezesM = parseFloat(prompt("Valor inválido ! Digíte um valor válido "))
+                }
+                const pegadaTotal3 = Number((0.072*350*4*xvezesM) +(0.055*num1) + (27*num2*4)  + (num3*70));
+                //console.log("Pegada de carbono: ",pegadaTotal3);
+                //console.log(typeof(pegadaTotal3));
+                var resultado = document.getElementById("resultado");
+                                
+                // atualiza o conteúdo do elemento de resultado
+                resultado.innerHTML ="Pegada de carbono: "+pegadaTotal3.toFixed(2)+" KgC no mês";
+                // mostra o elemento de resultado
+                resultado.style.display = "block";
+
+                if(num2 >= 5){
+                    var solucoes = document.getElementById("solucoes");
+                    solucoes.innerHTML = "Reduzir o consumo de carne e laticínios, já que a produção de carne e laticínios é responsável por uma grande quantidade de emissões de gases de efeito estufa. A porcentagem de emissões correspondente pode variar dependendo da fonte de dados, mas em geral a produção de carne e laticínios corresponde a cerca de 14,5% das emissões globais de gases de efeito estufa."
+                    solucoes.style.display = "block";
+                }
+                if(num1 >= 300){
+                    var solucoes2 = document.getElementById("solucoes2");
+                    solucoes2.innerHTML = "Reduzir o consumo de energia elétrica,usando fontes renováveis de energia e evitando o desperdício de energia. A porcentagem de emissões correspondente dependerá da fonte de eletricidade utilizada, mas em geral a geração de eletricidade é responsável por cerca de 31% das emissões globais de gases de efeito estufa."
+                    solucoes2.style.display = "block";
+                }else{
+                    if(num1 <200){
+                        var solucoes2 = document.getElementById("solucoes2");
+                        solucoes2.innerHTML = "Continue reduzindo o consumo de energia elétrica,usando fontes renováveis de energia e evitando o desperdício de energia. A porcentagem de emissões correspondente dependerá da fonte de eletricidade utilizada, mas em geral a geração de eletricidade é responsável por cerca de 31% das emissões globais de gases de efeito estufa."
+                        solucoes2.style.display = "block";
+                    }
+                }
+                
+
+                if(xvezesM >=5){
+                    var solucoes3 = document.getElementById("solucoes3");
+                    solucoes3.innerHTML = "Usar transporte sustentável, como bicicleta, transporte público ou carros elétricos. A porcentagem de emissões correspondente dependerá do tipo de transporte utilizado,mas em geral o transporte é responsável por cerca de 15% das emissões globais de gases de efeito estufa."
+                    solucoes3.style.display = "block";
+                }
+
+               }
+               
+               if(selectedValueN === 4){
+                //Considerando a pé,bike e etc.....
+                const pegadaOutros = (0.055*num1) + (27*num2*4)  + (num3*70);
+                var resultado = document.getElementById("resultado");
+                                
+                // atualiza o conteúdo do elemento de resultado
+                resultado.innerHTML ="Pegada de carbono: "+pegadaOutros.toFixed(2)+" KgC no mês";
+                // mostra o elemento de resultado
+                resultado.style.display = "block";        
+               }

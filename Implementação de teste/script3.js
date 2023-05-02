@@ -1,0 +1,37 @@
+var btn = document.querySelector('#send');
+
+btn.addEventListener("click",(event)=>{
+    event.preventDefault();
+
+    var testeEmail = document.getElementById("email").value;
+    var testePass = document.getElementById("pass").value;
+
+    /*    
+   console.log(testeEmail);
+   console.log(testePass);
+    */
+
+   if(((testePass === " ") || (testePass.length <8)) || (testeEmail === " ") || !(EmailValidacao(testeEmail))){
+    alert("Preencha os campos corretamente");
+    return false;
+   }
+   else{
+    alert("Dados enviados");
+    formulario.submit();
+   }
+
+
+});
+//Validação de email com regex
+function EmailValidacao (Email){
+    const emailRegex = new RegExp(
+        // a até z minúsculo,a a z maiusculo e traços seguidos por @ e .com
+        /^[a-zA-z0-9._-]+@[a-zA-z0-9._-]+\.[a-zA-Z]{2,}$/
+    );
+    if(emailRegex.test(Email)){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
