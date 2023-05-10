@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type="text/css" href = "style2.css">
+
+    <title>Document</title>
+</head>
+<ul class="topnav">
+    <li><a href="index.html">Pagina Inicial</a></li>
+    <li><a href="index.html">Sobre</a></li>
+    <li><a href="index.html">Institucional</a></li>
+</ul>
+<div class="pagina">
+  <div class="pagina_form">
+      <form class="pagina_formulario">
+          <h2>Calcule sua pegada de carbono</h2>
+          <div class="campo1">
+              <label>Consumo aproximado de eletricidade por mês:</label>
+          </div>
+          
+          <div class="campo2">
+              <label> Quantas vezes come carne vermelha na semana:</label>
+          </div>
+          <div class="campo3">
+              <label> Consumo de gás por mês:</label>
+          </div>
+          <div class="campo_radio">
+              <legend>Qual transporte mais utilizado na semana? </legend>
+              <select class="escolhido">
+                  <option value="1">Ônibus</option>
+                  <option value="2">Carro</option>
+                  <option value="3">Moto</option>
+                  <option value="4">Outros</option>
+              </select>      
+          </div>
+              <button type="submit" id="botao">Enviar</button>
+          </form>
+  </div>
+
+  <div  id="resultado" style="display: none;"></div>
+    
+  <div class="bloco"  style="display: none;">  
+    <div id="solucoes"  style="display: none;"></div>
+    <div id = "img1"></div>
+  </div>
+
+  <div class="bloco2"  style="display: none;">   
+    <div id = "solucoes2" style="display: none;"></div>
+    <div id="img2"></div>
+  </div>
+
+  <div class="bloco3"  style="display: none;"> 
+    <div id="solucoes3" style="display: none;"></div>
+    <div id="img3"></div>
+  </div>
+
+
+<script src="script2.js"></script>
+
+</body>
+</html>
